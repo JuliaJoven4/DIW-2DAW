@@ -1,0 +1,116 @@
+$header: rgb(116, 116, 116);
+$contenido: rgb(90, 90, 90);
+
+@media all and (min-width: 320px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: $contenido;
+    }
+    header {
+        background-color: $header;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+    footer {
+        background-color: $header;
+        padding: 20px;
+        margin: 10px;
+        text-align: left;
+    }
+    div p {
+        color: white;
+    }
+    .titulo {font-weight: bold;}
+    
+    /*MENÚ*/
+    #menu {
+        width: 400px;
+        display: grid;
+        grid-template-areas:
+        'op1 op2 op3 op4'
+        'op5 op6 op7 op8';
+    }
+    .opcion {
+        list-style: none;
+        float:left;
+        margin: 0px;
+        padding: 0px;
+    }
+    .opcion p a {
+        background-color: rgb(58, 58, 58);
+        color:#000000;
+        text-decoration:none;
+        padding:10px 12px;
+        display: block;
+    }
+    .opcion p a:hover {
+        background-color:rgb(116, 116, 116);
+        color: #000000;
+    }
+    #op1 {grid-area: op1;}
+    #op2 {grid-area: op2;}
+    #op3 {grid-area: op3;}
+    #op4 {grid-area: op4;}
+    #op5 {grid-area: op5;}
+    #op6 {grid-area: op6;}
+    #op7 {grid-area: op7;}
+    #op8 {grid-area: op8;}
+    #op1, #op2, #op3, #op4, #op5, #op6, #op7, #op8 { height: 90px;}
+    
+    .multimedia {
+        padding: 20px;
+        margin: 10px;
+        background-color: rgb(58, 58, 58);
+    }
+    #mapas_bits img {
+        width: 250px;
+        height: 150px;
+    }
+    #vectorial img {
+        width: 250px;
+        height: 150px;
+    }
+    #picture img {
+        width: 300px;
+        height: 175px;
+    }
+    #keyframe {
+        animation-name: color_fondo;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    #keyframe img {
+        width: 300px;
+        height: 200px;
+    }
+    #keyframe p {
+        animation-name: color_p;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes color_fondo {
+        0%   {background-color:#000000;}
+        15%  {background-color:#1f1f1f;}
+        30%  {background-color:#444444;}
+        45%  {background-color:#616161;}
+        60% {background-color:#7a7a7a;}
+        75% {background-color:#a3a3a3;}
+        87% {background-color:#d1d1d1;}
+        100% {background-color:#ececec;}
+    }
+    @keyframes color_p {
+        75% {color: black;}
+        87% {color: black;}
+        100% {color: black;}
+    }
+}
+
+@media all and (min-width: 1024px) {
+    #menu {
+        width: 900px;
+        display: grid;
+        grid-template-areas:
+        'op1 op2 op3 op4 op5 op6 op7 op8';
+    }
+}

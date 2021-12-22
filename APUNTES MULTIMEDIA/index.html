@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ESTILOS/apuntes_multimedia.css">
+    <title>Apuntes multimedia</title>
+</head>
+<body>
+
+    <center>
+
+    <header>
+        <h1>APUNTES MULTIMEDIA</h1>
+    </header>
+
+    <nav id="menu">
+        <div class="opcion" id="op1">
+            <p><a href="#mapas_bits">Imágenes de mapas de bits</a></p>
+        </div>
+        <div class="opcion" id="op2">
+            <p><a href="#vectorial">Imagen vectorial</a></p>
+        </div>
+        <div class="opcion" id="op3">
+            <p><a href="#picture">Picture</a></p>
+        </div>
+        <div class="opcion" id="op4">
+            <p><a href="#keyframe">Animación</a></p>
+        </div>
+        <div class="opcion" id="op5">
+            <p><a href="#canvas">Canvas</a></p>
+        </div>
+        <div class="opcion" id="op6">
+            <p><a href="#audio">Audio</a></p>
+        </div>
+        <div class="opcion" id="op7">
+            <p><a href="#video">Vídeo</a></p>
+        </div>
+        <div class="opcion" id="op8">
+            <p><a href="#otros">Otros</a></p>
+        </div>
+    </nav>
+
+    <main>
+        <div id="mapas_bits" class="multimedia">
+            <p class="titulo">Imagen de mapas de bits</p>
+            <img src="./ARCHIVOS/Flower.jpg" alt="Flor amarilla">
+            <img src="./ARCHIVOS/Flowers2.jpg" alt="Flores blancas">
+            <p class="licencias">Licencias: ambas imágenes han sido marcadas como dedicadas al dominio público.</p>
+        </div>
+        <div id="vectorial" class="multimedia">
+            <p class="titulo">Imagen vectorial</p>
+            <img src="./ARCHIVOS/Grass.svg" alt="Césped">
+            <img src="./ARCHIVOS/Dog.svg" alt="Perro">
+            <p class="licencias">Licencias: ambas imágenes han sido marcadas como dedicadas al dominio público.</p>
+        </div>
+        <div id="picture" class="multimedia">
+            <picture>
+                <p class="titulo">Picture</p>
+                <source media="(min-width:1024px)" srcset="ARCHIVOS/Flowers.jpg">
+                <source media="(min-width:768px)" srcset="ARCHIVOS/Flower2.jpg">
+                <source media="(min-width:320px)" srcset="ARCHIVOS/Flowers3.jpg">
+                <img src="ARCHIVOS/Flowers.jpg" alt="Flowers" style="width:auto;">
+            </picture>
+            <p class="licencias">Licencias: todas las imágenes han sido marcadas como pertenecientes al dominio público.</p>
+        </div>
+        <div id="keyframe" class="multimedia">
+            <p class="titulo">Animación</p>
+            <img src="ARCHIVOS/Glass_ball.jpg" alt="Bola de cristal">
+            <p class="licencias">Licencias: la imagen ha sido marcada como dedicada al dominio público.</p>
+        </div>
+        <div id="canvas" class="multimedia">
+            <p class="titulo">Canvas</p>
+            <canvas id="miCanvas" width="300" height="175" style="border:1px solid #ffffff;">
+                Tu buscador no soporta la etiqueta 'canvas' utilizada en este apartado. Prueba a utilizar otro.</canvas>
+        </div>
+        <div id="audio" class="multimedia">
+            <p class="titulo">Audio</p>
+            <audio controls>
+                <source src="ARCHIVOS/Por_la_boca_vive_el_pez.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div id="video" class="multimedia">
+            <p class="titulo">Vídeo</p>
+            <video width="300" height="550" controls>
+                <source src="ARCHIVOS/Patitos.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <footer id="otros">
+        <p>Contacto: <a href="mailto:julia.joven@gmail.com">julia.joven@gmail.com</a></p>
+        <p>©Julia Joven Barrio. Todos los derechos reservados.</p>
+    </footer>
+
+    </center>
+
+    <script lang="JavaScript">
+        var canv = document.getElementById("miCanvas");
+        var ctx = canv.getContext("2d");
+        ctx.beginPath();
+        ctx.font = "20px Arial";
+        ctx.arc(150,90,70,0,2*Math.PI);
+        ctx.fillText("Mi canvas", 105, 95);
+        ctx.stroke();
+        </script> 
+
+</body>
+</html>
