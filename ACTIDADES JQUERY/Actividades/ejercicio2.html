@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+
+    <h1>Ejercicio 2</h1>
+    <input type="button" id="nombre" value="Julia">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $("#nombre").mouseenter(function() {
+                $("#nombre").animate({
+                    opacity: '0.3'
+                }, 400);
+            });
+            $("#nombre").mouseleave(function() {
+                $("#nombre").animate({
+                    opacity: '1'
+                }, 400);
+            });
+        });
+
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #nombre {
+            height: 120px;
+            width: 100px;
+            background-color: rgb(100, 235, 156);
+        }
+    </style>
+</body>
+</html>
