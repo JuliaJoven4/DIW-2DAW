@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecicio 1</title>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <input type="button" id="nombre" value="Julia">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $("#nombre").click(function() {
+                $("#nombre").hide(5000);
+                $("#nombre").show(3000);
+                $("#nombre").hide(1);
+                $("#nombre").show(200);
+                $("#nombre").hide(1);
+                $("#nombre").show(2000, function() {
+                    alert("He tardado 2 segundos en mostrarme");
+                });
+
+            });
+        });
+
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #nombre {
+            height: 120px;
+            width: 100px;
+            background-color: rgb(100, 192, 235);
+        }
+    </style>
+
+</body>
+</html>
