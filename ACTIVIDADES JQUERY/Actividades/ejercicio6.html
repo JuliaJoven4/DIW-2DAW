@@ -23,12 +23,12 @@
     <script>
 
         $(document).ready(function() {
-            $("input").mouseenter(function() {
+            $("input").focus(function() {
                 $(this).css({
                     'color': 'red'
                 });
             });
-            $("input").mouseleave(function() {
+            $("input").blur(function() {
                 $(this).css({
                     'color': 'green'
                 });
